@@ -8,9 +8,8 @@ This image is based on idea #1 on our team's ideas.md. A lonely man wants a frie
 ![Storyboard based on idea #1 on ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea1_Inkan.jpg)
 
 Austin Gelb
-The first image is based on idea #5 in ideas.md. This shows use of a Lost and Found application utilizing physical spaces/maps.
-![]
-()
-The second image is based on idea #4 in ideas.md. This shows the use of a collaborative game application that utilizes the environment and Augmented Reality to build trust between members.
-![]
-()
+This storyboard is based on idea #5 in ideas.md. It shows use of a Lost and Found application that utilizes physical spaces/maps.
+![Storyboard based on idea #5 on ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Austin_Storyboard_LostandFound.jpg)
+This storyboard is based on idea #4 in ideas.md. It shows the use of a collaborative game application that utilizes the environment and Augmented Reality to build rapport between members.
+![Storyboard based on idea #4 on ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Austin_Storyboard_AR.jpg)
+
