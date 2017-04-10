@@ -22,3 +22,10 @@ The next two images are based on Idea #6 on ideas.md. It shows two people playin
 his friend's general location.
 ![Story board based on idea #6 on ideas.md, first three panels](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea_6_part1_Peter.jpg))
 ![Story board based on idea #6 on ideas.md, last three panels](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea_6_part2_Peter.jpg))
+
+Andrew Thai 
+
+This storyboard is based on idea 1 on our team's.md. In this scenario, a person is walking around in Price Center and makes a new friend that he can use the character of in his game.
+![Storyboard based on idea #1 ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea1_Andrew.jpg)
+This image is based on idea #5 on our team's ideas.md. A student loses his wallet, and uses the app to have fellow students in the vicinity retrieve his wallet for him.  
+![Storyboard based on idea #5 on ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea5_Andrew.jpg)
