@@ -13,3 +13,12 @@ This storyboard is based on idea #5 in ideas.md. It shows use of a Lost and Foun
 This storyboard is based on idea #4 in ideas.md. It shows the use of a collaborative game application that utilizes the environment and Augmented Reality to build rapport between members.
 ![Storyboard based on idea #4 on ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Austin_Storyboard_AR.jpg)
 
+Peter Tran
+The first two images are based on Idea #3 on ideas.md. It shows a person walking through library walk and notices a tree, in which
+he finds details about the plant based on his location, which he then records like a notebook.
+![Storyboard based on idea #3 on ideas.md, first four panels](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea_3_part1_Peter.jpg)
+![Storyboard based on idea #3 on ideas.md, last panel](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea_3_part2_Peter.jpg)
+The next two images are based on Idea #6 on ideas.md. It shows two people playing hide and seek, in which one person uses his phone to find
+his friend's general location.
+![Story board based on idea #6 on ideas.md, first three panels](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea_6_part1_Peter.jpg))
+![Story board based on idea #6 on ideas.md, last three panels](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea_6_part2_Peter.jpg))
