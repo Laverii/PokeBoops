@@ -6,3 +6,11 @@ First two images are based on idea #3 on our team's.md. In this scenario, a pers
 ![Storyboard based on  idea #3 on ideas.md, last panel (#7)](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea3_Back_Inkan.jpg)
 This image is based on idea #1 on our team's ideas.md. A lonely man wants a friend in his location and a girl walks by. Thanks to the app installed on their smartphone, it shows who passed by and some of their details, allowing them to connect and become friends,
 ![Storyboard based on idea #1 on ideas.md](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/Storyboard_Idea1_Inkan.jpg)
+
+Austin Gelb
+The first image is based on idea #5 in ideas.md. This shows use of a Lost and Found application utilizing physical spaces/maps.
+![]
+()
+The second image is based on idea #4 in ideas.md. This shows the use of a collaborative game application that utilizes the environment and Augmented Reality to build trust between members.
+![]
+()
