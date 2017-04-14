@@ -8,10 +8,12 @@ Tweet Description:
 
 Storyboard:
 
-Description:
+Description of feedback:
+
+Description of proposed project's features:
 
 Work split:
-Austin:
-Andrew:
-Peter:
+Austin: Front-end (HTML/ CSS)
+Andrew: Back-end (Database), functionality
+Peter: Back-end (Database), functionality
 Inkan: front-end (HTML/ CSS), graphic desiggn if needed.
