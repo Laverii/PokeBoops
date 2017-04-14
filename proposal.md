@@ -17,6 +17,7 @@ One of the feedbacks asked for the benefits for this app, since they said that t
 
 Description of proposed project's features: 
 Using our storyboard and feedback, we further fleshed out our idea. Like hte preivious feedback, we can have a map that shows the general area where the user think their lost item is, and then check back to see if anyone found it. If possible, we can add push notifications to notify users if someone found it.
+![Lost and Found Application Features](https://github.com/Laverii/PokeBoops/blob/master/Storyboards/storyboard_proposal_part2.jpg)
 
 Work split:
 
