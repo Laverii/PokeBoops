@@ -4,21 +4,19 @@
 <head>
 <title>Lost and Found</title>
 
-	<link rel="stylesheet" href="/public/css/leaflet.css" />
-	<script src="/public/js/leaflet.js"></script>
-	<script src="public/js/leaflet-src.js"></script>
-	<script src = "public/js/leaflet-src.map"></script>
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<script src="js/leaflet/leaflet-src.js"></script>
 
 	<!-- Reference taken from http://uafrazier.github.io/leaflet-basics/. It references to the hosted Leaflet files -->
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>-->
 
 
 	<style>
 		#lostMap {
-			height: 900px;
-			width: 900px;
+			height: 600px;
+			width: 800px;
 		}
 
 	</style>
@@ -32,10 +30,7 @@
 		<!-- Script to make the map variable -->
 		<script>
 			//make a variable for map (follows tutorial for http://leafletjs.com/reference.html#map-constructor)
- 			var lostMap = L.map('lostMap', {
- 			center: [32.877492, -117.235277],
- 			zoom: 10
- 			});
+ 			var lostMap = L.map('lostMap', {scrollWheelZoom:true}).setView([32.8801, -117.2340], 16);
 
  			//render map onto our page (followed tutorial on http://leafletjs.com/examples/quick-start/ and http://uafrazier.github.io/leaflet-basics/ )
  			//tile set from https://leaflet-extras.github.io/leaflet-providers/preview/index.html
