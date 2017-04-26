@@ -6,7 +6,7 @@ Austin: Looked into understanding Leaflet and D3 (discovered GeoJSON, shapefiles
 
 Andrew:
 
-Peter:
+Peter: Like Austin, I looked into Leaflet. I was able to figure out how to make and render a map by researching different tutorials. I helped Inkan with learning how to rendering the map. I found out the coordinates to get the UCSD map, and how to make different markers. However, I have yet found out how to add markers by clicking on the map, which I am still researching.
 
 Inkan: Like the rest of the team, I also looked into Leaflet. I was trying to figure out how to make and render a map on the webpage. I helped make the skeleton of the index.html and with Peter's and leaflet tutorial's help, I was able to at least render the map on the screen. I added the d3 and leaflet repository into our own repository, however due to some issues we still need to source the original host leaflet instead of our repo.
 
