@@ -2,7 +2,7 @@ Team PokeBoop, Team 19, K1
 
 Team Contributions:
 
-Austin:
+Austin: Looked into understanding Leaflet and D3 (discovered GeoJSON and GIS which could be integrated in this project further). Also looked into creating paths/routes that the user could draw via click events (functionality, not yet implemented). Wrote code in index.html to obtain data from our own repository instead of the URL used in the Leaflet tutorials and to set the map view. 
 
 Andrew:
 
