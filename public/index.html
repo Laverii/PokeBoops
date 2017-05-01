@@ -50,6 +50,22 @@
         <!-- Script to make marker-->
         <script>
             //idea: allow user to select icon; icon of lost item will be general idea of what it is. 
+			//Marker Icon and documentation/example/tutorial: http://leafletjs.com/reference-1.0.3.html#icon
+			//Image from: http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/map-marker-icon.html
+			var startPoint = L.icon({
+				iconUrl: 'images/markerRed.png',
+				iconSize: [48,48],
+				iconAnchor: [22, 47]
+			});
+
+			//Map events and clicking tutorial: http://leafletjs.com/examples/quick-start/
+			function mapClick(e)
+			{
+				//Marker tutorial: http://leafletjs.com/examples/quick-start/
+				L.marker(e.latlng, {icon: startPoint}).addTo(lostMap);
+			}
+			lostMap.on('click', mapClick);
+
         </script>    
     
     
