@@ -14,10 +14,18 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>-->
 
 	<!-- Tutorial: http://leafletjs.com/examples/quick-start/ -->
+	<!-- Popup reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651 -->
 	<style>
 		#lostMap {
 			height: 600px;
 			width: 800px;
+		}
+
+		/* css to customize Leaflet default styles  */
+		.custom .leaflet-popup-tip,
+		.custom .leaflet-popup-content-wrapper {
+    		background: #e93434;
+    		color: #ffffff;
 		}
 
 	</style>
@@ -58,11 +66,23 @@
 				iconAnchor: [22, 47]
 			});
 
+			//Popup customization reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651
+			// create popup contents
+    		var customPopup = "You lost this wallet<br/><img src=https://cdn.shopify.com/s/files/1/0145/1752/products/Walnut-02.jpg?v=1416155729' alt='wallet pic' width='100px'/>";
+    
+    		// specify popup options 
+    		var customOptions =
+        	{
+        		'maxWidth': '100',
+        		'className' : 'custom'
+        	}
+			
 			//Map events and clicking tutorial: http://leafletjs.com/examples/quick-start/
 			function mapClick(e)
 			{
 				//Marker tutorial: http://leafletjs.com/examples/quick-start/
-				L.marker(e.latlng, {icon: startPoint}).addTo(lostMap);
+				//Popup binding reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651
+				L.marker(e.latlng, {icon: startPoint}).bindPopup(customPopup,customOptions).addTo(lostMap);
 			}
 			lostMap.on('click', mapClick);
 
