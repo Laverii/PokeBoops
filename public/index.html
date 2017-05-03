@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/leaflet.css" />
     <link rel="stylesheet" href="css/main.css" />
 	<script src="js/leaflet/leaflet-src.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/marker.js"></script>
 
 	<!-- Reference taken from http://uafrazier.github.io/leaflet-basics/. It references to the hosted Leaflet files -->
 	<!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
@@ -15,26 +17,18 @@
 
 	<!-- Tutorial: http://leafletjs.com/examples/quick-start/ -->
 	<!-- Popup reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651 -->
-	<style>
-		#lostMap {
-			height: 600px;
-			width: 800px;
-		}
-
-		/* css to customize Leaflet default styles  */
-		.custom .leaflet-popup-tip,
-		.custom .leaflet-popup-content-wrapper {
-    		background: #e93434;
-    		color: #ffffff;
-		}
-
-	</style>
 
 </head>
 
 <body>
 <!-- Leaflet guide from tutorial: http://leafletjs.com/examples/quick-start/ -->
 	<div id ="lostMap"></div>
+    
+        <div class="NavBar">
+            <a href="#Lost">Lost</a>
+            <a href="#Found">Found</a>
+            <a href="#MyProfile">My Profile</a>
+        </div>
 
 		<!-- Script to make the map variable -->
 		<script>
@@ -95,5 +89,6 @@
 </body>
     
 <footer>Insert buttons here</footer>
+    
     
 </html> 
