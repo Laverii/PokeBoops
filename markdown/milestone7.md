@@ -16,4 +16,4 @@ I made that the user can click on the map and make markers appear onto the map a
 
 Screenshot:
 
-![Standard map view]()
+![Standard map view](https://github.com/Laverii/PokeBoops/blob/master/markdown/Functionality2.PNG)
