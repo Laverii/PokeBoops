@@ -12,6 +12,6 @@ Peter:
 I implemented the popup feature, when you clicked on the marker. I was also researching databases that were compatible with web applications, but I am having problems deciding which databases to use.
 
 Inkan:
-I made that the user can click on the map and make markers appear onto the map and added a temporary red marker that we can use. I also told the group about Leaflet.draw and try to source it (onto a test repo on my local computer), but I am having some trouble doing so. 
+I made that the user can click on the map and make markers appear onto the map and added a temporary red marker that we can use. I also told the group about Leaflet.draw and also researched it as well, trying to figure out what the functions are and how to source it to our code so we can use the draw functions. I tried to source it (onto a test repo on my local computer), but I am having some trouble doing so. 
 
 Screenshot:
