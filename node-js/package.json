@@ -1,0 +1,15 @@
+{
+  "name": "cogs-121-project",
+  "version": "0.0.0",
+  "description": "If you simply type",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/keeling-js/entry.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keeling-js": "^1.1.1"
+  }
+}

@@ -1,0 +1,29 @@
+#lostMap 
+    {
+        margin-left:auto; margin-right:auto;
+        height: 600px;
+			width: 800px;
+    }
+
+/* css to customize Leaflet default styles  */
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper 
+        {
+    		background: #e93434;
+    		color: #ffffff;
+		}
+
+footer 
+    {
+        text-align: center;
+    }
+
+section p
+    {
+        text-align: center;
+    }
+.NavBar
+    {
+        text-align: center;
+    
+    }

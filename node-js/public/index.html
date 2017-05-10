@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Lost and Found</title>
+
+	<!-- Taken out for now, fix later
+	<link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/main.css" />
+	<script src="js/leaflet/leaflet-src.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/marker.js"></script> -->
+
+	<!-- Reference taken from http://uafrazier.github.io/leaflet-basics/. It references to the hosted Leaflet files -->
+	<!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>-->
+
+	<!-- Tutorial: http://leafletjs.com/examples/quick-start/ -->
+	<!-- Popup reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651 -->
+
+	<!-- Leaflet.Draw plugin. -->
+	<meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="leaflet_Draw/Leaflet.draw-master/docs/examples/libs/leaflet.css"/>
+    <link rel= "stylesheet" href = "leaflet_Draw/Leaflet.draw-master/src/leaflet.draw.css"></script>
+
+    <script src="leaflet_Draw/Leaflet.draw-master/docs/examples/libs/leaflet-src.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/Leaflet.draw.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/Leaflet.Draw.Event.js"></script>
+
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/Edit.Poly.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/Edit.Circle.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/Edit.Rectangle.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/Edit.Marker.js"></script>
+
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.Feature.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.Polyline.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.Polygon.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.Rectangle.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.Circle.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/handler/Draw.Marker.js"></script>
+
+    <script src="leaflet_Draw/Leaflet.draw-master/src/ext/TouchEvents.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/ext/LatLngUtil.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/ext/GeometryUtil.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/ext/LineUtil.Intersect.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/ext/Polyline.Intersect.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/ext/Polygon.Intersect.js"></script>
+
+    <script src="leaflet_Draw/Leaflet.draw-master/src/Control.Draw.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/Tooltip.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/Toolbar.js"></script>
+
+    <script src="leaflet_Draw/Leaflet.draw-master/src/draw/DrawToolbar.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/EditToolbar.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="leaflet_Draw/Leaflet.draw-master/src/edit/handler/EditToolbar.Delete.js"></script> 
+
+</head>
+
+<section><p><b>Use the toolbar buttons on the left to specify the location where the item was lost or found. The buttons are as follows:</b></p>
+    <p>- Polyline: Draw a path
+    <p>- Circle: Create a general area
+    <p>- Marker: Place an exact point
+        <p>Any mistakes can be edited with the two buttons in the bottom toolbar. Just remember to click save if you make an edit.
+</section>
+
+<body>
+<!-- Leaflet guide from tutorial: http://leafletjs.com/examples/quick-start/ -->
+	<div id ="lostMap"></div>
+    
+        <div class="NavBar">
+            <a href="lostForm.html">Lost</a>
+            <a href="foundForm.html">Found</a>
+            <a href="#MyProfile">My Profile</a>
+        </div>
+
+		<!-- Script to make the map variable -->
+		<script>
+			//make a variable for map (follows tutorial for http://leafletjs.com/reference.html#map-constructor)
+ 			var lostMap = L.map('lostMap', {scrollWheelZoom:true}).setView([32.8801, -117.2340], 15);
+
+ 			//render map onto our page (followed tutorial on http://leafletjs.com/examples/quick-start/ and http://uafrazier.github.io/leaflet-basics/ )
+ 			//tile set from https://leaflet-extras.github.io/leaflet-providers/preview/index.html
+ 			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+ 			}).addTo(lostMap);
+
+		</script>
+    
+        <!-- See current location for tracking -->
+        <script>
+            //map.locate({setView: true, maxZoom: 16});
+        </script>    
+    
+    
+        <!-- Script to make marker-->
+        <script>
+            //idea: allow user to select icon; icon of lost item will be general idea of what it is. 
+			//Marker Icon and documentation/example/tutorial: http://leafletjs.com/reference-1.0.3.html#icon
+			//Image from: http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/map-marker-icon.html
+			var startPoint = L.icon({
+				iconUrl: 'images/markerRed.png',
+				iconSize: [48,48],
+				iconAnchor: [22, 47]
+			});
+            
+			//Popup customization reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651
+			// create popup contents
+            /* 
+            var customPopup = "You lost this wallet<br/><img src=https://cdn.shopify.com/s/files/1/0145/1752/products/Walnut-02.jpg?v=1416155729' alt='wallet pic' width='100px'/>";
+    
+    		// specify popup options 
+    		var customOptions =
+        	{
+        		'maxWidth': '100',
+        		'className' : 'custom'
+        	}
+			
+			//Map events and clicking tutorial: http://leafletjs.com/examples/quick-start/
+			function mapClick(e)
+			{
+				//Marker tutorial: http://leafletjs.com/examples/quick-start/
+				//Popup binding reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651
+				L.marker(e.latlng, {icon: startPoint}).bindPopup(customPopup,customOptions).addTo(lostMap);
+			}
+			lostMap.on('click', mapClick);
+            */
+
+			/* Leaflet Draw section. Draw allows the user to draw images on the map such as lines, shapes, and circle.
+			
+			leaflet draw here: https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html#l-draw
+			leaflet Draw API: https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html
+
+			Followed  a tutorial based on basic.html file in the examples folder of leaflet.Draw (leaflet_Draw/Leaflet.Draw/example/basic.html)
+			as well as the api.
+			*/
+                      
+			var drawnItems = new L.FeatureGroup();
+			lostMap.addLayer(drawnItems);
+            
+            //L.control.layers({'drawlayer':drawnItems}, {position: 'topright', collapsed: false}).addTo(lostMap);
+
+			var drawControl = new L.Control.Draw({
+				draw:
+				{
+					polyline: true,
+					polygon: true,
+					circle: true,
+					marker: true
+				},
+
+				edit:
+				{
+					featureGroup: drawnItems
+				}
+			});
+            
+			lostMap.addControl(drawControl);
+
+			lostMap.on(L.Draw.Event.CREATED, function (e) {
+				var type = e.layerType;
+				layer = e.layer;
+
+				if(type == 'polyon')
+				{
+					//add marker/popup here?
+				}
+				if(type == 'circle')
+				{
+					//add marker/popup here?
+				}
+				if(type == 'polyline')
+				{
+					//add marker/popup here?
+				}
+				//If anything else is needed
+
+				drawnItems.addLayer(layer);
+			});
+
+			lostMap.on(L.Draw.Event.EDITED, function (e) {
+                var layers = e.layers;
+                var countOfEditedLayers = 0;
+                layers.eachLayer(function (layer) {
+                    countOfEditedLayers++;
+                });
+            console.log("Edited " + countOfEditedLayers + " layers");
+    });
+
+        </script>    
+    
+</body>
+    
+<footer>Insert buttons here</footer>
+    
+    
+</html> 
