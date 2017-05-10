@@ -62,12 +62,19 @@
 
 </head>
 
+<section><p><b>Use the toolbar buttons on the left to specify the location where the item was lost or found. The buttons are as follows:</b></p>
+    <p>- Polyline: Draw a path
+    <p>- Circle: Create a general area
+    <p>- Marker: Place an exact point
+        <p>Any mistakes can be edited with the two buttons in the bottom toolbar. Just remember to click save if you make an edit.
+</section>
+
 <body>
 <!-- Leaflet guide from tutorial: http://leafletjs.com/examples/quick-start/ -->
 	<div id ="lostMap"></div>
     
         <div class="NavBar">
-            <a href="#Lost">Lost</a>
+            <a href="lostForm.html">Lost</a>
             <a href="#Found">Found</a>
             <a href="#MyProfile">My Profile</a>
         </div>
@@ -101,10 +108,11 @@
 				iconSize: [48,48],
 				iconAnchor: [22, 47]
 			});
-
+            
 			//Popup customization reference: http://bl.ocks.org/uafrazier/d589caa322f1b1e7c651
 			// create popup contents
-    		var customPopup = "You lost this wallet<br/><img src=https://cdn.shopify.com/s/files/1/0145/1752/products/Walnut-02.jpg?v=1416155729' alt='wallet pic' width='100px'/>";
+            /* 
+            var customPopup = "You lost this wallet<br/><img src=https://cdn.shopify.com/s/files/1/0145/1752/products/Walnut-02.jpg?v=1416155729' alt='wallet pic' width='100px'/>";
     
     		// specify popup options 
     		var customOptions =
@@ -121,7 +129,7 @@
 				L.marker(e.latlng, {icon: startPoint}).bindPopup(customPopup,customOptions).addTo(lostMap);
 			}
 			lostMap.on('click', mapClick);
-
+            */
 
 			/* Leaflet Draw section. Draw allows the user to draw images on the map such as lines, shapes, and circle.
 			
@@ -131,9 +139,11 @@
 			Followed  a tutorial based on basic.html file in the examples folder of leaflet.Draw (leaflet_Draw/Leaflet.Draw/example/basic.html)
 			as well as the api.
 			*/
-
+                      
 			var drawnItems = new L.FeatureGroup();
 			lostMap.addLayer(drawnItems);
+            
+            //L.control.layers({'drawlayer':drawnItems}, {position: 'topright', collapsed: false}).addTo(lostMap);
 
 			var drawControl = new L.Control.Draw({
 				draw:
@@ -141,15 +151,15 @@
 					polyline: true,
 					polygon: true,
 					circle: true,
-					marker: false
+					marker: true
 				},
 
 				edit:
 				{
-					featureGroup: drawnItems,
-					remove: true
+					featureGroup: drawnItems
 				}
 			});
+            
 			lostMap.addControl(drawControl);
 
 			lostMap.on(L.Draw.Event.CREATED, function (e) {
@@ -170,13 +180,19 @@
 				}
 				//If anything else is needed
 
-				lostMap.addLayer(layer);
+				drawnItems.addLayer(layer);
 			});
 
-			
+			lostMap.on(L.Draw.Event.EDITED, function (e) {
+                var layers = e.layers;
+                var countOfEditedLayers = 0;
+                layers.eachLayer(function (layer) {
+                    countOfEditedLayers++;
+                });
+            console.log("Edited " + countOfEditedLayers + " layers");
+    });
 
         </script>    
-    
     
 </body>
     
