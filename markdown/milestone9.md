@@ -8,6 +8,7 @@ What I did this week is created the toolbar that allows the users to draw shapes
 Peter:
 
 Andrew:
+Peter and I did research on how to use GeoJSON in order to save marker locations that the user would input. We unforunately were not able to comprehend how to implement this into our application in the amount of time we had, so we decided to go with a mySQL based database instead. I helped Inkan and Austin with PHP coding, debugging, showed them a bit on how XAMPP and mySQL worked, and cleaning up the layout a bit. I also linked Inkan's lostForm.html and foundForm.html files to the index page along with centering the buttons and cleaning the page up a tad. 
 
 Austin:
 I got the editing functionality for the toolbar buttons working this week. I found that the layers themselves weren't being detected despite their appearance within the map. The user will now be able to correct for any mistakes in their lines, shapes, or points placed on the map. I also looked into getting a working database to post/pull the posted lost and found items with their characteristics (shape and coordinates in map, time lost, taglines, etc.); this included php files, XXAMP, and mySQL.
