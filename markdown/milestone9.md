@@ -1,0 +1,6 @@
+Milestone 9
+
+Team PokeBoop, K1
+
+Inkan:
+What I did this week is created the toolbar that allows the users to draw shapes like the square/polyline/circle/polygon/marker onto the map. By following the tutorial provided by leaflet.draw( leaflet_Draw/Leaflet.draw-master/docs/examples/basic.html) and with Professor Guo's help, I was able to source the leaflet.draw files correctly into our index.html files as well as make the toolbar. Thus I was able to get the basic functions of drawing shapes to work on the map. After that I researched php files and other javascript variables because I want to figure out how to save the data that was entered onto the lost form or the found form. So I made an itemDatabaseLost.php and itemDatabaseFound.php file that should echo the inputs on each form based on if it is lost or found, and I also fixed the lostForm.html and foundForm.html to referenced the two php files as well change some formatting on it (like submit). However we are now looking for a way for that saved data to be saved and appear when the files are run, so now I am researching more about php to understand how it works.
