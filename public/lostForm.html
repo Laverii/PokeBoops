@@ -9,24 +9,27 @@
 
 <!-- Lost Form -->
 <!-- Form tutorial link: https://www.tutorialspoint.com/html/html_forms.htm -->
-<form method = "get" id = "lost_Form">
-	Item Name: <input type ="text" name="Item Name"></text>
+<!-- Tutorial for forms: https://www.w3schools.com/js/js_input_examples.asp -->
+<!-- Tutorial for php and forms: https://www.w3schools.com/php/php_forms.asp -->
+<form action = "itemDatabaseLost.php" method = "get" id = "lost_Form">
+	Item Name: <input type ="text" name="item_name" id ="item_name"></text>
 	<br>
 	Description
 	<br>
-	<textarea rows="6" cols="20" name = "description">Put a desciprtion of your item here</textarea>
+	<textarea rows="6" cols="20" name = "description" id="description"></textarea>
 	<br>
 	<br>
 	<input type =  "file" name = "fileupload" accept = "image/*"></text>
 	<br>
 	<p> If found, please contact </p>
-	Full Name: <input type ="text" name = "Full name"></input>
+	Full Name: <input type ="text" name = "full_name" id="full_name"></input>
 	<br>
-	Phone number: <input type = "text" name = "phone number"></input> 
+	Phone number: <input type = "text" name = "phone_number" id="phone_number"></input> 
 	<br>
-	Email: <input type = "text" name = "Email"></input>
+	Email: <input type = "text" name = "email" id="email"></input>
 	<br>
-	<input type = "submit" name = "Post Lost Item" value ="submit"></input>
+	<!-- Make a submit button : https://www.w3schools.com/tags/att_button_formmethod.asp-->
+	<input type = "submit" name = "Post Lost Item" value ="submit" id = "submit_ID"></input>
 </form>
 
 
