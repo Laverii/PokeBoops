@@ -13,5 +13,5 @@ Austin:
 I got the editing functionality for the toolbar buttons working this week. I found that the layers themselves weren't being detected despite their appearance within the map. The user will now be able to correct for any mistakes in their lines, shapes, or points placed on the map. I also looked into getting a working database to post/pull the posted lost and found items with their characteristics (shape and coordinates in map, time lost, taglines, etc.); this included php files, XXAMP, and mySQL.
 
 Functionality Screenshots:
-![Toolbar-created circle]()
-![Toolbar-edited circle]()
+![Toolbar-created circle](https://github.com/Laverii/PokeBoops/blob/master/markdown/M9Function1.PNG)
+![Toolbar-edited circle](https://github.com/Laverii/PokeBoops/blob/master/markdown/M9Function2.PNG)
