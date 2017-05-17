@@ -8,6 +8,7 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 </head>
 
@@ -41,16 +42,17 @@
 <!-- Form tutorial link: https://www.tutorialspoint.com/html/html_forms.htm -->
 <!-- Tutorial for forms: https://www.w3schools.com/js/js_input_examples.asp -->
 <!-- Tutorial for php and forms: https://www.w3schools.com/php/php_forms.asp -->
-<form action = "itemDatabaseLost.php" method = "get" id = "lost_Form">
+<!--<form action = "itemDatabaseLost.php" method = "get" id = "lost_Form">-->
+<form id = "lost_Form">
 	Item Name: <input type ="text" name="item_name" id ="item_name"></text>
 	<br>
 	Description
 	<br>
 	<textarea rows="6" cols="20" name = "description" id="description"></textarea>
 	<br>
-	<br>
+	<!--<br>
 	<input type =  "file" name = "fileupload" accept = "image/*"></text>
-	<br>
+	<br>-->
 	<p> If found, please contact </p>
 	Full Name: <input type ="text" name = "full_name" id="full_name"></input>
 	<br>
@@ -62,6 +64,34 @@
 	<input type = "submit" name = "Post Lost Item" value ="submit" id = "submit_ID"></input>
 </form>
 
+<script>
+function postLost()
+{
+	console.log("in postlost function");
+	$.ajax({
+		url: "/ajax/lost?action=lostItem",
+		type: "post",
+		data: {
+			item_name: $("#item_name").val(),
+			description: $("#description").val(),
+			full_name: $("#full_name").val(),
+			phone_number: $("#phone_number").val(),
+			email: $("#email").val()
+
+		},
+		success: function(data)
+		{
+			alert("Post Successful!");
+		}
+	});
+}
+
+$("#lost_Form").submit(function(){
+
+	postLost();
+	return false;
+});
+</script>
 
 </body>
 

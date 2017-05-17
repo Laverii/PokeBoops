@@ -1,6 +1,8 @@
 module.exports = {
-	get: function(req, res)
-	{
-		res.success(require("./data.json"));
+	lostItem: function(req, res){
+		console.log("enter lost js");
+		require("./data.json").push(req.body);
+		console.log(require("./data.json"));
+		res.success();
 	}
 }
