@@ -3,9 +3,40 @@
 <head>
 <title>Found Form</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<!-- Boostrap files link at: https://v4-alpha.getbootstrap.com/getting-started/introduction/. This allows us to use the Bootstrap functions-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+	<!-- Followed official bootstrap to make a navigation bar. It's basic, so hopefully we will upgrade later. This is for the found page.
+    https://v4-alpha.getbootstrap.com/components/navbar/ -->
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  			<a class="navbar-brand" href="index.html">Lost and Found</a>
+  				<div class="collapse navbar-collapse" id="navbarNav">
+    				<ul class="navbar-nav">
+      					<li class="nav-item active">
+        					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="lostForm.html">Lost</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="foundForm.html">Found</a>
+      					</li>
+     					 <li class="nav-item">
+        					<a class="nav-link disabled" href="#">My Profile</a>
+      					</li>
+    				</ul>
+  				</div>
+		</nav>
 
 <!-- Form tutorial link: https://www.tutorialspoint.com/html/html_forms.htm -->
 <!-- Tutorial for forms: https://www.w3schools.com/js/js_input_examples.asp -->
