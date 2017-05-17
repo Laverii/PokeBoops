@@ -2,13 +2,13 @@
 <html>
 <head>
 <title>Found Form</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 <!-- Boostrap files link at: https://v4-alpha.getbootstrap.com/getting-started/introduction/. This allows us to use the Bootstrap functions-->
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 </head>
 
@@ -47,10 +47,10 @@
 	Description
 	<br>
 	<textarea rows="6" cols="20" name = "description" id = "description"></textarea>
-	<br>
+	<!--<br>
 	<input type =  "file" name = "fileupload" accept = "image/*" id = "picture"></text>
-	<br>
-	If you lost this item, please contact:
+	<br>-->
+	<p>If you lost this item, please contact:</p>
 	<br>
 	Full Name: <input type ="text" name = "full_name" id ="full_name"></input>
 	<br>
@@ -71,6 +71,7 @@ function postFound()
 		url: "/ajax/found?action=foundItem",
 		type: "post",
 		data: {
+			item_name: $("#item_name").val(),
 			description: $("#description").val(),
 			full_name: $("#full_name").val(),
 			phone_number: $("#phone_number").val(),
