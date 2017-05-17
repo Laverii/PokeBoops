@@ -6,6 +6,8 @@ Inkan:
 Last Wednesday Andrew and I went to Chen's office hours. He helped us start up a basic node.js so we can store data, in which I pushed onto our repo. For this week, I was tasked with working on Boostrap. While I admit I could have done more, I looked into Bootstrap and started with a basic framework. With that, I was able to source Bootstrap onto our app and got working navigation bars for each page that we had.  This also helped update the text and forms on the pages. I hope to update more on it on the future. (https://v4-alpha.getbootstrap.com/)
 
 Peter:
+This week, I was researching ajax and json to try to store data, but I got stuck on the actual implementation of the parsing/writing data to the
+JSON file but I was able to replicate what was done on the found page on the lost page. When Inkan added the bootstrap stuff into the html pages, I debugged the pages to at least write some data that the user writes. I'm still working on writing the data. I may switch to another method of saving data like using something like a database like Google Firebase, since I saw some implementation of it on web application similar to what we're been doing.
 
 Andrew:
 
