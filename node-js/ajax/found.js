@@ -1,14 +1,14 @@
-//Kandarp and Alok helped us here.
-var foundDescription = require('foundDescription')
-var requiredData = require("./data.json");
+//Kandarp and Alok helped us here
+var fs = require('fs');
+var d = require("./data.json");
 
 module.exports = {
 	foundItem: function(req, res){
 
 		console.log("enter found js");
-		requiredData.push(req.body);
-		foundDescription.writeFile('ajax/data.json', JSON.stringify(requiredData));
-		console.log(requiredData)
+		d.push(req.body);
+		fs.writeFile('ajax/data.json', JSON.stringify(d));
+		console.log(d)
 		res.success();
 	}
 }
