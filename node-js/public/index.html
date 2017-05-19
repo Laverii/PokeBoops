@@ -71,6 +71,13 @@
 </head>
 
 <body>
+
+     <!-- Kandarp and Alok helped us here. -->
+    <% for(var i=0; i<data.length; i++) {%>
+       <p><%= data[i].item_name %></p>
+    <% } %>
+
+    
 	<!-- Followed official bootstrap to make a navigation bar. It's basic, so hopefully we will upgrade later.
     https://v4-alpha.getbootstrap.com/components/navbar/ -->
 	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
