@@ -4,6 +4,7 @@ var lostMap;
 var feature;
 
 function load_map() {
+    $('#foundDiv').hide();
 	lostMap = L.map('lostMap', {scrollWheelZoom:true}).setView([32.8801, -117.2340], 15);
 
     /* Script to make the map variable */ 
@@ -374,6 +375,11 @@ function addr_search() {
             $('<p>', { html: "No results found" }).appendTo('#results');
         }
     });
+}
+
+/* For hiding and showing the forms hidden in the buttons */
+function openBox() {
+    $('#foundDiv').slideToggle();
 }
 
 window.onload = load_map;

@@ -27,3 +27,25 @@ section p
         text-align: center;
     
     }
+.found_Form_button
+    {
+    
+     border: 1px dotted gray;
+     padding: 20px;
+     font-size: 20px;
+        
+    }
+
+#found_Form
+{
+	text-align: center;
+	border-width: 0;
+	width: 100%;
+	margin: 0 0 .1em 0;   
+}
+
+#search
+{
+    padding-top: .1em;
+    text-align: center;   
+}

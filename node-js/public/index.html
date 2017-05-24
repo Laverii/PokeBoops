@@ -97,12 +97,6 @@
       		<li class="nav-item">
         		<a class="nav-link" href="lostForm.html">Lost</a>
       		</li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="foundForm.html">Found</a>
-      		</li>
-      		<li class="nav-item">
-        		<a class="nav-link disabled" href="#">My Profile</a>
-      		</li>
     	</ul>
   	</div>
 	</nav>
@@ -128,7 +122,10 @@
 </body>
     
 <footer>
-
+    <div class="found_Form_button" id="button">
+    <a href="#" class="thumbnail" onclick="openBox()">Found</a>
+    </div>
+    
     <div id = "foundDiv">
 
         <!--Inkan: Moved found form to bottom of the page, it allows the form to submit and post onto the front page as a list. -->
@@ -137,7 +134,7 @@
         <!-- Tutorial for forms: https://www.w3schools.com/js/js_input_examples.asp -->
         <!-- Tutorial for php and forms: https://www.w3schools.com/php/php_forms.asp -->
         <form id ="found_Form">
-            <p>Found Form</p>
+            <!-- <p>Found Form</p> -->
             Item Name: <input type ="text" name="item_name" id = "item_name"></text>
             <br>
             Description
