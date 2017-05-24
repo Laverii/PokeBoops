@@ -24,6 +24,10 @@ Functionality Screenshots:
 
 ![Draw Circle Posting Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function5.PNG) 
 
+![Draw Circle Posting Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function9.PNG) 
+
+![Draw Circle Posting Function 4](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function10.PNG) 
+
 ![Search Bar Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function1.PNG) 
 
 ![Search Bar Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function2.PNG) 
@@ -34,4 +38,10 @@ Functionality Screenshots:
 
 ![Found Form/data Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function7.PNG)  
 
-![Found Form/data Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function8.PNG)  
+![Found Form/data Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function8.PNG)
+
+![Draw Line Posting Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function11.PNG) 
+
+![Draw Line Posting Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function12.PNG) 
+
+![Draw Line Posting Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function13.PNG)   
