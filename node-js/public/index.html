@@ -79,7 +79,7 @@
      <!-- Kandarp and Alok helped us here. -->
     <% for(var i=0; i<data.length; i++) {%>
        <p><%= data[i].item_name %></p>
-    <% } %>
+    <% } %> 
 
     
 	<!-- Followed official bootstrap to make a navigation bar. It's basic, so hopefully we will upgrade later.
@@ -209,9 +209,9 @@
 				{
 					 //PopupL http://leafletjs.com/reference-1.0.3.html#popup
                      //Inkan: lostFound still a work in progress. Maybe a popup will first appear to ask if the user is inputting infor a lost or found object, and once they press it will take them to the appropriate form?   
-                        /*var lostFound = new L.popup();
+                       /* var lostFound = new L.popup();
                         lostFound.setContent('<p>Is your item: <input type ="button" name = "goToLost" value = "Lost" id = "goto_lostForm"></input> or <input type= "button" name = "goToFound" value = "Found" id = "goto_foundForm"></input>');
-                        layer.bindPopup(lostFound);
+                        layer.bindPopup(lostFound);*/
 
                         var popup = new L.popup();
                         //switch input type for the submit button, went from "submit" to button.
