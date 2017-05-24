@@ -15,12 +15,13 @@ Austin:
 This week I looked into search bar functionality for locations within the map, in case users weren't exactly familiar with the visual representation of lost/found items within areas. Specifically, I looked into Openstreetmap's Nominatim and was able to access its database with jQuery. From there it was just a matter of displaying the results based on user inquiry and directing to the appropriate location within the map. Additionally, I found other tilesets that could be used within Leaflet that remove the icons of the standard OSM render. I decided to include both for the user, one that gives detailed information, and one that removes all 'clutter' aside from the lost and found item postings themselves. 
 
 Functionality Screenshots:
-![Draw Circle Posting Function]() 
 
-![Draw Circle Posting Function 2]() 
+![Draw Circle Posting Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function4.PNG) 
 
-![Search Bar Function]() 
+![Draw Circle Posting Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function5.PNG) 
 
-![Search Bar Function 2]() 
+![Search Bar Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function1.PNG) 
 
-![Tileset Function]() 
+![Search Bar Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function2.PNG) 
+
+![Tileset Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function3.PNG) 
