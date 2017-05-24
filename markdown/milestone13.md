@@ -24,9 +24,9 @@ Functionality Screenshots:
 
 ![Draw Circle Posting Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function5.PNG) 
 
-![Draw Circle Posting Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function9.PNG) 
+![Draw Circle Posting Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function9.png) 
 
-![Draw Circle Posting Function 4](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function10.PNG) 
+![Draw Circle Posting Function 4](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function10.png) 
 
 ![Search Bar Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function1.PNG) 
 
@@ -34,14 +34,14 @@ Functionality Screenshots:
 
 ![Tileset Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function3.PNG) 
 
-![Found Form/data Function 1](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function6.PNG)
+![Found Form/data Function 1](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function6.png)
 
-![Found Form/data Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function7.PNG)  
+![Found Form/data Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function7.png)  
 
-![Found Form/data Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function8.PNG)
+![Found Form/data Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function8.png)
 
-![Draw Line Posting Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function11.PNG) 
+![Draw Line Posting Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function11.png) 
 
-![Draw Line Posting Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function12.PNG) 
+![Draw Line Posting Function 2](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function12.png) 
 
-![Draw Line Posting Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function13.PNG)   
+![Draw Line Posting Function 3](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function13.png)   
