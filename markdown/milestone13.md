@@ -14,6 +14,10 @@ Alok and Kandarp helped us set up the Keeling.js to put information onto our hom
 Austin:
 This week I looked into search bar functionality for locations within the map, in case users weren't exactly familiar with the visual representation of lost/found items within areas. Specifically, I looked into Openstreetmap's Nominatim and was able to access its database with jQuery. From there it was just a matter of displaying the results based on user inquiry and directing to the appropriate location within the map. Additionally, I found other tilesets that could be used within Leaflet that remove the icons of the standard OSM render. I decided to include both for the user, one that gives detailed information, and one that removes all 'clutter' aside from the lost and found item postings themselves. 
 
+Peter:
+This week, I looked into the EasyKVS that was provided from Alok, but I was having a lot of problems trying to connect this API to our application. So I decided to work on another database called Firebase. I'm still in the process pushing our data to the firebase project.
+If we are able to get EasyKVS to work or the Keeling.js to pull the correct data, then we may switch back. For now, I will continue to work on Firebase. 
+
 Functionality Screenshots:
 
 ![Draw Circle Posting Function](https://github.com/Laverii/PokeBoops/blob/master/markdown/M13Function4.PNG) 
