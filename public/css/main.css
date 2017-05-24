@@ -5,6 +5,25 @@
 			width: 800px;
     }
 
+/* New */
+div#search {
+  background-color: white;
+  position: absolute;
+  bottom: 400px;
+  left: 400px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+div#search input {
+  width: 200px;
+}
+div#results {
+  font-style: sans-serif;
+  color: black;
+  font-size: 75%;
+}
+
 /* css to customize Leaflet default styles  */
 .custom .leaflet-popup-tip,
 .custom .leaflet-popup-content-wrapper 
