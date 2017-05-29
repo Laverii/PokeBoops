@@ -77,9 +77,9 @@
 <body>
 
      <!-- Kandarp and Alok helped us here. -->
-    <% for(var i=0; i<data.length; i++) {%>
+   <!-- <% for(var i=0; i<data.length; i++) {%>
        <p><%= data[i].item_name %></p>
-    <% } %> 
+    <% } %> -->
 
     
 	<!-- Followed official bootstrap to make a navigation bar. It's basic, so hopefully we will upgrade later.
@@ -133,27 +133,27 @@
         <!-- Form tutorial link: https://www.tutorialspoint.com/html/html_forms.htm -->
         <!-- Tutorial for forms: https://www.w3schools.com/js/js_input_examples.asp -->
         <!-- Tutorial for php and forms: https://www.w3schools.com/php/php_forms.asp -->
-        <form id ="found_Form">
-            <!-- <p>Found Form</p> -->
+        <!-- <form id ="found_Form"> 
+            <p>Found Form</p> 
             Item Name: <input type ="text" name="item_name" id = "item_name"></text>
             <br>
             Description
             <br>
-            <textarea rows="6" cols="20" name = "description" id = "description"></textarea>
+            <textarea rows="6" cols="20" name = "description" id = "description"></textarea>-->
             <!--<br>
             <input type =  "file" name = "fileupload" accept = "image/*" id = "picture"></text>
             <br>-->
-            <p>If you lost this item, please contact:</p>
+            <!--<p>If you lost this item, please contact:</p>
             <br>
             Full Name: <input type ="text" name = "full_name" id ="full_name"></input>
             <br>
             Phone number: <input type = "text" name = "phone_number" id = "phone_number"></input> 
             <br>
             Email: <input type = "text" name = "email" id = "email"></input>
-            <br>
+            <br> -->
             <!-- Make a submit button : https://www.w3schools.com/tags/att_button_formmethod.asp-->
-            <input type = "submit" name = "Post Found Item" value ="submit" id ="submit_Id"></input>
-        </form>
+            <!-- <input type = "submit" name = "Post Found Item" value ="submit" id ="submit_Id"></input>
+        </form> -->
 
         <script>
         function postFound()
@@ -185,7 +185,7 @@
     </script>
         <!-- Kandarp and Alok helped us here. -->
          <!-- Making lists: https://v4-alpha.getbootstrap.com/components/list-group/ -->
-        <ul class="list-group">
+        <!--<ul class="list-group">
             <% for(var i=0; i<data.length; i++) {%>
             <li class = "list-group-item">
                 Item Name: <%= data[i].item_name %>
@@ -194,7 +194,7 @@
             <br>Phone Number: <%= data[i].phone_number %></br>
             <br>Email: <%= data[i].email %></br></li>
             <% } %>
-        </ul>
+        </ul>-->
     </div>
 </footer>
     
