@@ -140,6 +140,9 @@ function load_map() {
                         var foundButton = document.getElementById('goto_foundForm');
                         //When clicked change the popup to the found form.
                         foundButton.onclick = function() {
+                            //Inkan: Help from a friend, explained to me the setStyle function. 
+                            //Also: https://gis.stackexchange.com/questions/75590/setstyle-function-for-geojson-features-leaflet
+                            layer.setStyle({color: 'blue'});
                             var popup = new L.popup();
                             popup.setContent('<form id ="found_Form_Map" onsubmit="return submitFoundMap();"> <p>Item Name:</p> <input type ="text" name="item_name" id = "item_name_Map"></input><br><p>Description</p><br><textarea rows="6" cols="20" name = "description" id = "description_Map"></textarea><p>If you LOST this item, please contact:</p><br>Full Name: <input type ="text" name = "full_name" id ="full_name_Map"></input><br><p>Phone number:</p> <input type = "text" name = "phone_number" id = "phone_number_Map"></input><br><p>Email:</p><input type = "text" name = "email" id = "email_Map"></input><br><input type = "submit" name = "Post Found Item" value ="submit" id ="submit_Id_Map"></input></form>');
                                                 
@@ -208,8 +211,11 @@ function load_map() {
                         var lostButton = document.getElementById('goto_lostForm');
                          //When clicked change the popup to the found form.
                         lostButton.onclick = function() {
+                            //Inkan: Help from a friend, explained to me the setStyle function. 
+                            // Also: https://gis.stackexchange.com/questions/75590/setstyle-function-for-geojson-features-leaflet
+                            layer.setStyle({color:'red'});
                             var popup = new L.popup();
-                            popup.setContent('<form id ="lost_Form_Map" "> <p>Item Name:</p> <input type ="text" name="item_name" id = "item_name"></text><br><p>Description</p><br><textarea rows="6" cols="20" name = "description" id = "description"></textarea><p>If you FOUND this item, please contact:</p><br>Full Name: <input type ="text" name = "full_name" id ="full_name"></input><br><p>Phone number:</p> <input type = "text" name = "phone_number" id = "phone_number"></input><br><p>Email:</p><input type = "text" name = "email" id = "email"></input><br><input type = "button" name = "Post Found Item" value ="submit" id ="submit_Id"></input></form>');
+                            popup.setContent('<form id ="lost_Form_Map" "> <p>Item Name:</p> <input type ="text" name="item_name" id = "item_name"></text><br><p>Description</p><br><textarea rows="6" cols="20" name = "description" id = "description"></textarea><p>If you FOUND this item, please contact:</p><br>Full Name: <input type ="text" name = "full_name" id ="full_name"></input><br><p>Phone number:</p> <input type = "text" name = "phone_number" id = "phone_number"></input><br><p>Email:</p><input type = "text" name = "email" id = "email"></input><br><input type = "submit" name = "Post Found Item" value ="submit" id ="submit_Id"></input></form>');
                             //layer.bindPopup(popup);
                                     
                             //Occurs when you submit the form. It takes that information and puts it on the popup.
@@ -281,6 +287,9 @@ function load_map() {
                         var foundButton = document.getElementById('goto_foundForm');
                         //When clicked change the popup to the found form.
                         foundButton.onclick = function() {
+                            //Inkan: Help from a friend, explained to me the setStyle function. 
+                            //Also: https://gis.stackexchange.com/questions/75590/setstyle-function-for-geojson-features-leaflet
+                            layer.setStyle({color: 'blue'});
                             var popup = new L.popup();
                             popup.setContent('<form id ="found_Form_Map" onsubmit="return submitFoundMap();"> <p>Item Name:</p> <input type ="text" name="item_name" id = "item_name_Map"></input><br><p>Description</p><br><textarea rows="6" cols="20" name = "description" id = "description_Map"></textarea><p>If you LOST this item, please contact:</p><br>Full Name: <input type ="text" name = "full_name" id ="full_name_Map"></input><br><p>Phone number:</p> <input type = "text" name = "phone_number" id = "phone_number_Map"></input><br><p>Email:</p><input type = "text" name = "email" id = "email_Map"></input><br><input type = "submit" name = "Post Found Item" value ="submit" id ="submit_Id_Map"></input></form>');
                                                 
@@ -353,6 +362,9 @@ function load_map() {
                         var lostButton = document.getElementById('goto_lostForm');
                          //When clicked change the popup to the found form.
                         lostButton.onclick = function() {
+                            //Inkan: Help from a friend, explained to me the setStyle function. 
+                            // Also: https://gis.stackexchange.com/questions/75590/setstyle-function-for-geojson-features-leaflet
+                            layer.setStyle({color:'red'});
                             var popup = new L.popup();
                             popup.setContent('<form id ="lost_Form_Map" "> <p>Item Name:</p> <input type ="text" name="item_name" id = "item_name_Map2"></text><br><p>Description</p><br><textarea rows="6" cols="20" name = "description" id = "description_Map2"></textarea><p>If you FOUND this item, please contact:</p><br>Full Name: <input type ="text" name = "full_name" id ="full_name_Map2"></input><br><p>Phone number:</p> <input type = "text" name = "phone_number" id = "phone_number_Map2"></input><br><p>Email:</p><input type = "text" name = "email" id = "email_Map2"></input><br><input type = "submit" name = "Post Found Item" value ="submit" id ="submit_Id_Map2"></input></form>');
                             //layer.bindPopup(popup);
@@ -416,13 +428,14 @@ function load_map() {
                         //Adds listener which is that the found button was clicked.
                         lostMap.on('popupopen', lostClicked);
                 }
-                //If anything else is needed
+                //Marker is used only for a found item
                 if(type == 'marker')
                 {
                     //Popup: http://leafletjs.com/reference-1.0.3.html#popup
                     //Inkan: THis popup asks if the item is lost or found.
                     var lostFound = new L.popup();
-                    lostFound.setContent('<p>Is your item: <input type ="button" name = "goToLost" value = "Lost" id = "goto_lostForm"></input> or <input type= "button" name = "goToFound" value = "Found" id = "goto_foundForm"></input>');
+                    //lostFound.setContent('<p>Is your item: <input type ="button" name = "goToLost" value = "Lost" id = "goto_lostForm"></input> or <input type= "button" name = "goToFound" value = "Found" id = "goto_foundForm"></input>');
+                    lostFound.setContent('<p>Did you find an item? CLick on the button below to show what you find and where you found it.</p><input type= "button" name = "goToFound" value = "Found" id = "goto_foundForm"></input>');
                     layer.bindPopup(lostFound);
 
                     var foundClicked = function() {
@@ -492,6 +505,7 @@ function load_map() {
 
 
 
+                    /*May not use for lost because users probably do not know the percise location they lost the item.
                     //found button clicked, it will open the form for found.
                     var lostClicked = function() {
                     //Get the submit button for found
@@ -555,7 +569,7 @@ function load_map() {
                             lostMap.off('popupopen', lostClicked);
                         };
                         //Adds listener which is that the found button was clicked.
-                        lostMap.on('popupopen', lostClicked);
+                        lostMap.on('popupopen', lostClicked);*/
                 }
                 drawnItems.addLayer(layer);
             });
@@ -617,74 +631,109 @@ function storeData(obj){
 }
 
 //Inkan: I was helped by a friend, helped ne understand how to get information and save it.
+//I was also recommended by CHen to switch over to LocalStorage too. 
+//Link: https://www.w3schools.com/html/html5_webstorage.asp
+//(Also helpful information: https://stackoverflow.com/questions/18014907/leaflet-draw-retrieve-layer-type-on-drawedited-event)
 var storeShape = function(layer, data){
+    //make a variable that gets the dat from the form
     var shape = {
         data: data
     };
-
+    //checks if the layer is a cricle
     if(layer instanceof L.Circle)
-    {
+    {   
+        //Get the radius info, the latlng info, and the color info
         shape.LatLng = layer.getLatLng();
         shape.radius = layer.getRadius();
+        shape.color = layer.options.color;
     }
     else if(layer instanceof L.Marker){
+        //Get the latlng info of the marker
         shape.LatLng = layer.getLatLng();
     }
     else if(layer instanceof L.Polyline){
+        //Get the latlngs info and color information
         shape.LatLngs = layer.getLatLngs();
+        shape.color = layer.options.color;
     }
 
+    //Checks if the storage is empty, then make a new one.
     var storageInformation = localStorage.getItem("shapeInfo");
     if(storageInformation === null){
         storageInformation = [];
     }
     else {
+        //if there is already a storage, just add on information to it.
         storageInformation = JSON.parse(storageInformation);
     }
+    //push the infromarion as a string into the storage
     storageInformation.push(JSON.stringify(shape));
+    //set that information into the local storage
     localStorage.setItem("shapeInfo", JSON.stringify(storageInformation));
 
 };
 
 //loads the data aof the form and the shapes drawn that was on the map.
 //Inkan: Was helped by a friend, helped me undestand on how to load shapes.
+// Also helpful link for understanding
 function loadShapes(drawnItems)
 {
+    //makes a storage that calls the key "ShapeInfo" from the storage
     var storageInformation = localStorage.getItem("shapeInfo");
+    //If the storage isn't empty then put in the new shape inforamtion by parsing
     if(storageInformation !== null)
     {
         storageInformation = JSON.parse(storageInformation);
         for(var i = 0; i < storageInformation.length; i++)
         {
+            //go through the storage information ray
             var shape = JSON.parse(storageInformation[i]);
+            //Checkinf if the shape is a circle since it has the radius property
             if(shape.hasOwnProperty("radius"))
             {
-                var circle = L.circle(shape.LatLng, shape.radius);
+                //Gets the circles lat,lng raidus, and color
+                var circle = L.circle(shape.LatLng, shape.radius, {color: shape.color});
+                //Binds the popup to the shape containing form data
                 var popup = L.popup();
                 popup.setContent(shape.data);
                 circle.bindPopup(popup);
+                //Adds it to the feature group of drawnItems
                 drawnItems.addLayer(circle);
             }
+            //Checks if the shape is a marker. This is done because the marker has the latng property.
             else if(shape.hasOwnProperty("LatLng"))
-            {
+            { 
+                //Gets the latlng properties of the marker
                 var marker = L.marker(shape.LatLng);
+                //get the popup and set it the marker
                 var popup = L.popup();
                 popup.setContent(shape.data);
+                //bind that information to the marker
                 marker.bindPopup(popup);
+                //Add it to the drawnItems featureGroups
                 drawnItems.addLayer(marker);
             }
+            //Checks if the shape is a polyline since it has multiple lat and lngs
             else if(shape.hasOwnProperty("LatLngs"))
             {
-                var polyline = L.polyline(shape.LatLngs);
+                //Get the polyline latlngs properties and color
+                var polyline = L.polyline(shape.LatLngs, {color: shape.color});
+                //get the popup information and store it
                 var popup = L.popup();
                 popup.setContent(shape.data);
+                //Bind that information to the popup
                 polyline.bindPopup(popup);
+                //Add it to the drawnItems feature group.
                 drawnItems.addLayer(polyline);
             }
 
         }
     }
 }
+
+
+
+//Search Bar functionality for areas (Austin)
 function chooseAddr(lat1, lng1, lat2, lng2, osm_type) {
 	var loc1 = new L.LatLng(lat1, lng1);
 	var loc2 = new L.LatLng(lat2, lng2);
