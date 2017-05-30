@@ -27,6 +27,7 @@ function load_map() {
         attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'})
     }).addTo(lostMap);
     
+            //followed example called basic.html in the leaflet_draw/Leaflet.draw-master/examples/basic.html
             var drawnItems = new L.FeatureGroup();
 			lostMap.addLayer(drawnItems);
             
@@ -115,9 +116,7 @@ function load_map() {
     importGeoJson(drawnItems, JSON.parse(localStorage.getItem("mapdataLocal")));
     //end geoJson export*/
 
-    //found button clicked, it will open the form for found.
-            
-
+            //followed example called basic.html in the leaflet_draw/Leaflet.draw-master/examples/basic.html
             lostMap.addControl(drawControl);
             lostMap.on(L.Draw.Event.CREATED, function (e) {
                 var type = e.layerType;
@@ -127,6 +126,7 @@ function load_map() {
                 // exportGeoJson(drawnItems, $("#mapdata"));
                 // exportGeoJson(drawnItems);
 
+                //used for both lost and found, used to estimate where you lost the item.
                 if(type == 'circle')
                 {
                     //Popup: http://leafletjs.com/reference-1.0.3.html#popup
@@ -273,7 +273,8 @@ function load_map() {
                         lostMap.on('popupopen', lostClicked);
                             
                     }//end of circle for loop
-                //GetLatLng isn't working well for polyline. The popup will close everytime the button is pressed but the process still works when you reopen it.
+
+                //Used getCenter intstead of getLatLng or getLatLngs. Draws a path, for both lost and found.
                 if(type == 'polyline')
                 {
                     //Popup: http://leafletjs.com/reference-1.0.3.html#popup
