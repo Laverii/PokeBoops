@@ -71,6 +71,8 @@
 
       <!-- Access the jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    
+    <script src="js/index.js"></script>
 </head>
 </head>
 
@@ -94,30 +96,101 @@
       		<li class="nav-item active">
         		<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       		</li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="lostForm.html">Lost</a>
+            
+            
+            <li class="nav-item active">
+                <div id="myBtn">
+        		<a class="nav-link" href="#">Help <span class="sr-only">(current)</span></a>
+                </div>
       		</li>
+            
+            
+ <!--           
+            <li>
+            <div id="search">
+        <input type="text" name="addr" value="" id="addr" size="10" />
+        <button type="button" onclick="addr_search();">Search</button>
+        <div id="results"/>
+    </div>
+            </li>
+ -->
+            
     	</ul>
   	</div>
 	</nav>
-
+    
+    
 	<!-- Usage of typography: https://v4-alpha.getbootstrap.com/content/typography/ -->
+<!--    
 	<section><p><b>Use the toolbar buttons on the left to specify the location where the item was lost or found. The buttons are as follows:</b></p>
     <p>- Polyline: Draw a path
     <p>- Circle: Create a general area
     <p>- Marker: Place an exact point
         <p>Any mistakes can be edited with the two buttons in the bottom toolbar. Just remember to click save if you make an edit.
 	</section>
-<!-- Leaflet guide from tutorial: http://leafletjs.com/examples/quick-start/ -->
-	<div id ="lostMap"></div>
-   
-    <div id="search">
+-->
+    
+        <div id="search">
         <input type="text" name="addr" value="" id="addr" size="10" />
         <button type="button" onclick="addr_search();">Search</button>
         <div id="results"/>
     </div>
-        
-    <script src="js/index.js"></script>
+    
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    
+<!-- Modal content  -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <ul class="list-group">
+                    <li class="list-group-item">1) Go to the toolbar. Use circle to show the approximate radius, line to backtrack your steps, and marker to show the exact location of the item.</li>
+                    <li class="list-group-item">2) When you open it, choose lost or found (marker is found only). Fill out the information and submit! Note: Lost is red and found is blue.</li>
+                    <li class="list-group-item">3) Search through the postings by clicking on the shapes! On it you can see the item name and secription as well as the contact information of the individual who lost or found the item.></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">We hope you enjoy our app! ^_^</li>
+                    
+                  </ul>
+  </div>
+    </div>
+    
+<script>
+    
+/* modal */
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+/* modal */
+    
+</script>    
+    
+    
+<!-- Leaflet guide from tutorial: http://leafletjs.com/examples/quick-start/ -->
+	<div id ="lostMap"></div>
+   
+
 
 </body>
     
