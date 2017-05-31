@@ -69,14 +69,14 @@ color: #FFFFFF;
 }
 
 nav {
-    position: absolute;   
+    position: relative;   
 }
 
 
-/*body {
+body {
     overflow:hidden;   
 }
-*/
+
 
 
 
